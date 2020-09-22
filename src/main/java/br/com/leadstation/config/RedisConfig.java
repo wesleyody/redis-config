@@ -10,6 +10,8 @@ import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.GenericToStringSerializer;
+import org.springframework.session.web.http.CookieHttpSessionIdResolver;
+import org.springframework.session.web.http.HttpSessionIdResolver;
 
 @Configuration
 @ComponentScan
@@ -32,6 +34,11 @@ public class RedisConfig {
         template.setConnectionFactory( jedisConnectionFactory() );
         template.setValueSerializer( new GenericToStringSerializer<>( Object.class ) );
         return template;
+    }
+
+    @Bean
+    public HttpSessionIdResolver httpSessionStrategy () {
+        return new CookieHttpSessionIdResolver();
     }
 
 }
