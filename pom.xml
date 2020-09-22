@@ -29,8 +29,8 @@
                     <snapshots><enabled>true</enabled></snapshots>
                 </repository>
                 <repository>
-                    <id>leadstation-redis-config</id>
-                    <name>Redis Config</name>
+                    <id>github</id>
+                    <name>GitHub Wesley Ody Apache Maven Packages</name>
                     <url>https://maven.pkg.github.com/wesleyody/redis-config</url>
                 </repository>
             </repositories>
@@ -46,8 +46,8 @@
 
     <distributionManagement>
         <repository>
-            <id>leadstation-redis-config</id>
-            <name>Redis Config</name>
+            <id>github</id>
+            <name>GitHub Wesley Ody Apache Maven Packages</name>
             <url>https://maven.pkg.github.com/wesleyody/redis-config</url>
         </repository>
     </distributionManagement>
