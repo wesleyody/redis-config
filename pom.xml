@@ -25,6 +25,14 @@
         <checkstyle.config.location>checkstyle.xml</checkstyle.config.location>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>leadstation-redis-config</id>
+            <name>Redis Config</name>
+            <url>https://maven.pkg.github.com/wesleyody/redis-config</url>
+        </repository>
+    </distributionManagement>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
